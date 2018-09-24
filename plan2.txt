@@ -1,23 +1,28 @@
 Requirement Specifications:
-    -This program must accept user input for the employee's name, the number of hours worked in a week, the hourly pay rate, 
-    -It then must calculate the area of the polygon.
-    -
+    -This program must accept user input for the employee's name, the number of hours worked in a week, the hourly pay rate, the federal tax withholding rate, and the state withholding rate.
+    -It then must calculate deductions due to federal and stated taxes.
+    -Finally, it should display the pay and deductions in a format following the given example and tell the user their net pay.
 System Analysis:
-    -The desired output will be the area of the n-sided polygon, which is calculated by this formula.
-    - area = (n * (s ** 2)) / (4 * math.tan(math.pi / n)) where n is the number of sides and s is the side length.
+    -The desired output will be the pay and deduction information based on user input.  The gross and net pay and deductions will be calculated following the formulas below.
+        > grossPay = hoursWorked * payRate
+        > netPay = grossPay - totalDeductions
+        > federalDeductions = federalTax * grossPay
+        > stateDeductions = stateTax * grossPay
+        > totalDeductions = federalDeductions + stateDeductions
 System Design:
-    -Prompt the user to input the number of sides and the length of the sides of the polygon.
-    -Compute the area using the formula given in the 3.5 exercise instructions.
-    -Display the area.
+    -Prompt the user to input the employee's name, the number of hours worked in a week, the hourly pay rate, the federal tax withholding rate, and the state withholding rate.
+    -Compute the gross pay, federal deductions, state deductions, and net pay.
+    -Format the text to fit the guidelines given.
+    -Display results to user.
 Implementation:
-    -See task1.py file for code
+    -See task2.py file for code
 Testing:
     -Test Cases
-        >Input n: 3  s: 7.8  Expected Output: 26.3445     PASSED
-        >Input n: 12  s: 15.4  Expected Output: 2655.28   PASSED
-        >Input n: 16  s: 22.6  Expected Output: 10271.1   PASSED
+        >Input           Expected Output
+        >Input           Expected Output
+        >Input           Expected Output
     -Problems
-        >NONE
+        >
 
 
 
